@@ -3,12 +3,16 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "slidev",
+    "dev": "CHOKIDAR_USEPOLLING=1 slidev",
     "build": "slidev build",
     "export": "slidev export"
   },
   "devDependencies": {
-    "@slidev/cli": "^52.11.0",
-    "@slidev/theme-default": "latest"
+    "@slidev/cli": "^53.1.0",
+    "@slidev/theme-default": "^0.25.0"
+  },
+  "packageManager": "bun@1.4.4",
+  "engines": {
+    "bun": ">=1.3.0"
   }
 }
