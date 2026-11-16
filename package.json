@@ -1,0 +1,14 @@
+{
+  "name": "orbital-datacenters",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.11.0",
+    "@slidev/theme-default": "latest"
+  }
+}
