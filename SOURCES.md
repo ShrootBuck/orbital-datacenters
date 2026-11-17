@@ -61,3 +61,13 @@ Use **5 kg per m² of emitting area** for the radiator subsystem. This is a scen
 At hypothetical launch prices of $100/kg and $1,000/kg, radiator launch costs alone are approximately $0.83 million and $8.3 million. Neither is a current SpaceX price quote or a prediction. These omit radiator manufacturing, solar arrays, compute, spacecraft structure, power systems, batteries, shielding, integration, operations, failures, financing, and disposal. Hardware obsolescence and utilization matter. No revenue forecast, valuation, or investment return is fabricated.
 
 The proposed investment gates are our classroom recommendation: sustained thermal performance, useful workload and network reliability, complete lifecycle economics, and safe end-of-life disposal. Start with independent inference or processing of space-origin data; tightly synchronized large-scale training imposes harder interconnect demands.
+
+## Earth orbit versus heliocentric training concept
+
+Added November 17, 2026. SpaceX’s filed system operates in Earth orbit, including sun-synchronous orbits, at 500–2,000 km altitude: [FCC DA 26-113](https://docs.fcc.gov/public/attachments/DA-26-113A1.pdf). Sun-synchronous describes an Earth orbit whose plane precesses to maintain approximately the same orientation relative to the Sun. Heliocentric describes an orbit about the Sun.
+
+The Earth-orbit inference / heliocentric batch-training split is our proposed longer-term architecture, not a claim about SpaceX’s announced deployment or an exclusive technical requirement. Both workloads can run in Earth orbit. Training still needs compact, fast internal interconnects; Google's [Suncatcher research](https://research.google/blog/exploring-a-space-based-scalable-ai-infrastructure-system-design/) supports that networking constraint, not the heliocentric proposal.
+
+For an illustrative Earth-to-cluster distance of 1,000,000 km, the one-way light-time is distance / c = 1,000,000 / 299,792.458 ≈ 3.34 seconds; round-trip propagation alone is about 6.67 seconds. Distance depends on the chosen trajectory and changes over time; solar orbit does not imply a fixed delay. Batch training may tolerate this delay to Earth if data and tightly coupled computation remain local to the cluster. Dataset and checkpoint transfer bandwidth also matter.
+
+Avoiding Earth eclipses requires a suitable trajectory and geometry. At the same distance from the Sun, irradiance is approximately the same; going heliocentric does not inherently increase available sunlight. Radiative heat rejection remains necessary. Deployment, communications, stationkeeping, radiation exposure, and servicing require an independent engineering analysis before this concept could be funded as a deployment program.

@@ -15,12 +15,12 @@ The dev command uses polling to avoid macOS file watcher limits. Dependencies ar
 
 ## Timing and delivery
 
-- Present slides **1–13**; stop at the closing pitch. An ending slide separates the appendix.
-- The read-aloud script is in each slide's speaker notes and in [SCRIPT.md](SCRIPT.md).
-- Target **125 words per minute**. The script is 1,082 words; budget about **9:20 including transitions and brief pauses**. Rehearse once: reading pace determines actual duration.
-- Slide **8** has two extra clicks: 300 K → 330 K → 360 K. The script marks both with `[click]`.
-- Diagrams animate automatically. Do not wait for animation loops to finish.
-- Slides **15–17** contain technical backup and sources and are outside the timed pitch.
+- Present all **11 slides**, ending with the investment ask.
+- Speaker notes are the verbatim script; [SCRIPT.md](SCRIPT.md) provides a standalone copy with pacing.
+- Target approximately **nine minutes**, including transitions and pointing, at about 125 words per minute. Rehearse to confirm an 8–10 minute delivery.
+- Slide **6** distinguishes Earth orbit from solar orbit. Earth-orbit inference is the proposed starting point; heliocentric batch training is our longer-term concept, not SpaceX’s filed plan.
+- Slide **9** has two extra clicks: 300 K → 330 K → 360 K, marked in the script.
+- Diagrams animate automatically; advance without waiting for a full animation loop.
 
 ## Build
 

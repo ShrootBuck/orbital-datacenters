@@ -83,7 +83,7 @@ transition: scan
 <div class="source">[3] FCC public notice: SpaceX applied for up to one million orbital data-center satellites. Diagram is a conceptual architecture.</div>
 
 <!--
-Here is the machine, and it only does three jobs. [Point to the sun and the blue panels, label one.] First, electricity in: sunlight hits the solar panels, and the glowing dots on the arms are that power flowing to the center. [Point to the box in the middle, label two.] Second, the computer: the chips in that box turn electricity into computation, and every watt they use ends up as heat. [Point to the two blue lines, label three.] Third, data in and out: there are no cables in orbit, so lasers send data up to a relay satellite and down to a ground station on Earth. [Point to the orange panel, label four.] And here is the hard part, waste heat out. Space has no air to blow heat away, so a liquid loop carries hot coolant from the computer to this radiator, which glows it off as infrared light, the wavy lines, and the cooled liquid returns. SpaceX applied for up to one million satellites.
+Here is the machine, and it does four jobs. [Point to the sun and the blue panels, label one.] First, electricity in: sunlight hits the solar panels, and the glowing dots on the arms are that power flowing to the center. [Point to the box in the middle, label two.] Second, the computer: the chips in that box turn electricity into computation, and every watt they use ends up as heat. [Point to the two blue lines, label three.] Third, data in and out: there are no cables in orbit, so lasers send data up to a relay satellite and down to a ground station on Earth. [Point to the orange panel, label four.] And here is the hard part, waste heat out. Space has no air to blow heat away, so a liquid loop carries hot coolant from the computer to this radiator, which glows it off as infrared light, the wavy lines, and the cooled liquid returns. SpaceX applied for up to one million satellites.
 -->
 
 ---
@@ -104,6 +104,40 @@ Here is the machine, and it only does three jobs. [Point to the sun and the blue
 
 <!--
 At Earth’s distance from the Sun, sunlight supplies about thirteen hundred sixty-one watts per square meter. Assume thirty percent efficient solar cells: that gives about four hundred eight watts of electricity per square meter. One megawatt therefore needs roughly twenty-four hundred fifty square meters of cells, even before losses. Ordinary low Earth orbits pass through Earth’s shadow. A dawn-dusk sun-synchronous orbit can reduce eclipses, but its actual illumination needs analysis. Sunlight is free. Reliable power still requires panels, pointing, and sometimes batteries.
+-->
+
+---
+transition: scan
+---
+
+# Two orbits. Different workloads.
+
+<div class="grid2" style="gap:25px;margin-top:20px">
+<div class="panel" style="padding:22px">
+<div class="mono small cyan">EARTH ORBIT · SPACEX’S FILED PLAN</div>
+<svg viewBox="0 0 400 110" style="width:100%;height:100px" aria-label="Compute satellites orbiting Earth" role="img"><circle cx="195" cy="55" r="30" fill="#153f58" stroke="#6ce9ff"/><ellipse cx="195" cy="55" rx="90" ry="45" fill="none" stroke="#6ce9ff77" class="orbit-line"/><rect x="276" y="48" width="16" height="14" fill="#6ce9ff"/><path d="M274 55H230" stroke="#6ce9ff" class="beam"/><text x="174" y="59" class="flow-label">EARTH</text></svg>
+<h2>Interactive inference</h2>
+<p class="muted" style="font-size:16px">Short paths to users.<br>Serve requests; return answers.</p>
+<div class="rule" style="margin:15px 0" />
+<p class="small cyan">Sun-synchronous still means Earth orbit.</p>
+</div>
+<div class="panel" style="padding:22px">
+<div class="mono small amber">SUN ORBIT · OUR LONGER-TERM CONCEPT</div>
+<svg viewBox="0 0 400 110" style="width:100%;height:100px" aria-label="A compact training cluster and Earth on separate paths around the Sun, schematic not to scale" role="img"><circle cx="195" cy="55" r="23" fill="#ffbc72"/><ellipse cx="195" cy="55" rx="112" ry="44" fill="none" stroke="#ffbc7277" class="orbit-line"/><circle cx="84" cy="55" r="10" fill="#153f58" stroke="#6ce9ff"/><rect x="298" y="40" width="11" height="12" fill="#ffbc72"/><rect x="313" y="47" width="11" height="12" fill="#ffbc72"/><path d="M307 49L315 53" stroke="#6ce9ff"/><text x="242" y="98" class="flow-label">COMPACT CLUSTER</text></svg>
+<h2>Batch training</h2>
+<p class="muted" style="font-size:16px">Upload data; train locally.<br>Return model checkpoints.</p>
+<div class="rule" style="margin:15px 0" />
+<p class="small amber">Earth link can wait. Chip-to-chip links cannot.</p>
+</div>
+</div>
+<div class="source">[3] FCC: Earth orbit, 500–2,000 km. [9] Google: training interconnect requirements. Workload split is our proposal, not an exclusive rule. Schematics not to scale.</div>
+
+<!--
+Here is the distinction: sun-synchronous means going around Earth while keeping a consistent orientation relative to the Sun. Heliocentric means going around the Sun itself. SpaceX’s filed proposal is Earth orbit, five hundred to two thousand kilometers up.
+
+For our investment strategy, Earth orbit is the starting point for interactive inference: answering users with a short communication path. Our longer-term concept puts a compact training cluster in solar orbit. With suitable positioning, it could avoid Earth’s recurring shadow and crowded Earth orbits. Staying near Earth’s solar distance gives similar sunlight per square meter. Upload the dataset, run the job locally, and send back model checkpoints. At a million kilometers from Earth, light takes about three seconds each way. That can be manageable for scheduled training; it is terrible for a live conversation.
+
+But the training chips still need fast links to each other. And solar orbit brings harder deployment and servicing. Training can also happen around Earth. This is a proposed division of workloads, not a physical requirement or SpaceX’s announced solar-orbit plan.
 -->
 
 ---
@@ -212,5 +246,5 @@ class: hero
 <div class="hero-credit">OUR PROPOSED INVESTMENT GATES · NOT SPACEX GUIDANCE</div>
 
 <!--
-We are asking you to fund the first orbital compute mission. Your investment pays for a prototype, its cooling system, launch, and the measurements that tell us whether this business can scale. First, we prove that the system can sustain useful computation in orbit. Then we measure its uptime and total cost per useful compute-hour against terrestrial alternatives. If the results meet our targets, we raise the next round and expand. The physics says we can radiate the heat. Your investment helps us prove we can do it profitably. Thank you.
+We are asking you to fund the first mission in Earth orbit. Your investment pays for a prototype, its cooling system, launch, and the measurements that tell us whether this business can scale. First, we prove that the system can sustain useful computation in orbit. Then we measure its uptime and total cost per useful compute-hour against terrestrial alternatives. If the results meet our targets, we raise the next round and expand. Start with useful inference near Earth. Prove the platform, then pursue larger training clusters. The physics says we can radiate the heat. Your investment helps us prove we can do it profitably. Thank you.
 -->
